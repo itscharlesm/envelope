@@ -6,6 +6,8 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .card {
@@ -13,14 +15,12 @@ body {
     border: 3px solid pink;
     border-radius: 15px;
     padding: 20px;
+    width: 100%;
     max-width: 500px;
-    width: 90%;
     text-align: center;
     box-shadow: 0 10px 20px rgba(255, 105, 180, 0.2);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative; /* changed from absolute */
+    box-sizing: border-box;
 }
 
 .top-img,
@@ -76,6 +76,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .inner-card {
@@ -89,4 +90,23 @@ body {
 
 .hidden {
     display: none;
+}
+
+/* ✅ Mobile-first responsiveness */
+@media (max-width: 480px) {
+    .card {
+        padding: 15px;
+        font-size: 0.95em;
+    }
+
+    .pink-btn,
+    .red-btn {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+    }
 }
