@@ -148,49 +148,13 @@ body {
     }
 }
 
-
-/* ✅ Mobile-first responsiveness */
-@media (max-width: 480px) {
-    .card {
-        width: 90vw;                /* take 90% of screen width */
-        max-width: none;            /* remove max constraint */
-        font-size: 1.2em;           /* larger base text */
-        padding: 25px;              /* more padding */
-        border-width: 4px;          /* thicker border */
-    }
-
-    .top-img,
-    .envelope-img {
-        width: 100%;                /* full width */
-        max-width: 100%;
-        height: auto;
-        border-width: 4px;
-        border-radius: 12px;
-    }
-
-    .pink-btn,
-    .red-btn {
-        width: 100%;
-        font-size: 1.2em;
-        padding: 14px 24px;
-    }
-
-    .btn-group {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
-    }
-
-    .inner-card {
-        font-size: 1.3em;
+@media (max-width: 600px) {
+    body {
         padding: 20px;
-        border-radius: 15px;
     }
 
-    .date,
-    .next-text,
-    .question,
-    .message {
-        font-size: 1.1em;
+    .card {
+        max-width: 400px;
+        padding: 18px;
     }
 }
