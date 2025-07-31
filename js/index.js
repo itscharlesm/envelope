@@ -9,6 +9,11 @@ function goToSecondView() {
     document.getElementById('view-2').classList.remove('hidden');
 }
 
+function goToThirdView() {
+    hideAllViews();
+    document.getElementById('view-3').classList.remove('hidden');
+}
+
 function noThanks() {
     hideAllViews();
     document.getElementById('view-no').classList.remove('hidden');
@@ -50,9 +55,16 @@ function handlePersistentNo(button) {
         message.textContent = "sure najuuud? :<<<";
         img.style.border = "3px solid pink";
         img.style.borderRadius = "10px";
+
+        // Change button texts
+        button.textContent = "Oo dili jud!";
+        const yesButton = view.querySelector('button.pink-btn');
+        if (yesButton) {
+            yesButton.textContent = "Open envelope";
+        }
     }
 
-    // Move button randomly
+    // Move "Dili jud!" button randomly
     const cardWidth = view.clientWidth - button.offsetWidth;
     const cardHeight = view.clientHeight - button.offsetHeight;
 
