@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Papers</title>
+    <title>Envelope</title>
     <link rel='stylesheet'
         href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'>
     <link rel="stylesheet" href="css/style.css">
@@ -11,7 +11,39 @@
 </head>
 
 <body>
-    <!-- Developed by Charles  -->
+    <div class="card" id="view-1">
+        <img src="https://i.imgur.com/2Dhgv.jpg" alt="Cute Image" class="top-img">
+        <h2 class="date">August 1, 2025</h2>
+        <p class="next-text">Click the next button</p>
+        <button class="pink-btn" onclick="goToSecondView()">Next</button>
+    </div>
+
+    <div class="card hidden" id="view-2">
+        <img src="https://i.imgur.com/NsU3ZB4.png" alt="Envelope" class="envelope-img">
+        <p class="question">Do you want to open it?</p>
+        <div class="btn-group">
+            <button class="pink-btn" onclick="openIt()">Open it</button>
+            <button class="red-btn" onclick="noThanks()">No ty</button>
+        </div>
+    </div>
+
+    <div class="card hidden" id="view-no">
+        <img src="https://i.imgur.com/8QfH5L3.png" alt="Sad Image" class="top-img">
+        <p class="message">awh... let's try again</p>
+        <button class="pink-btn" onclick="goToSecondView()">Again?</button>
+    </div>
+
+    <div class="card hidden" id="view-open">
+        <img src="https://i.imgur.com/w1n0h3N.jpeg" alt="Landscape Image" class="top-img">
+        <div class="inner-card">
+            <h3>To my iah ❤️</h3>
+            <p>
+                You are the sweetest soul I've ever met. Thank you for your care, your love,
+                and your ever-glowing smile. I hope this little card brings a warm hug to your heart.
+            </p>
+        </div>
+    </div>
+
     <script src="js/index.js"></script>
 </body>
 
